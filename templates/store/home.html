@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shoes Store</title>
+    <link rel="stylesheet" href="{% static 'store/style.css' %}">
+</head>
+<body>
+    <h1>👟 Online Shoes Store</h1>
+
+    <div class="products">
+        {% for product in products %}
+        <div class="card">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            <h3>{{ product.name }}</h3>
+            <p>Price: Rs {{ product.price }}</p>
+            <a class="btn" href="https://wa.me/923244504436?text=I%20want%20to%20order%20{{ product.name }}">
+                Order on WhatsApp
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
