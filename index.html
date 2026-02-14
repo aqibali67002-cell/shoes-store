@@ -1,26 +1,56 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Shoes Store</title>
-    <link rel="stylesheet" href="{% static 'store/style.css' %}">
+  <meta charset="UTF-8">
+  <title>Shoes Store</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>👟 Online Shoes Store</h1>
 
-    <div class="products">
-        {% for product in products %}
-        <div class="card">
-            <img src="{{ product.image.url }}" alt="{{ product.name }}">
-            <h3>{{ product.name }}</h3>
-            <p>Price: Rs {{ product.price }}</p>
-            <a class="btn" href="https://wa.me/923244504436?text=I%20want%20to%20order%20{{ product.name }}">
-                Order on WhatsApp
-            </a>
-        </div>
-        {% endfor %}
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1>Shoes Store</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Best Shoes in Town</h2>
+    <p>Comfortable | Stylish | Affordable</p>
+    <button>Shop Now</button>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="products">
+    <h2>Featured Shoes</h2>
+
+    <div class="product-list">
+      <div class="card">
+        <img src="https://via.placeholder.com/200" alt="Shoe 1">
+        <h3>Running Shoes</h3>
+        <p>Price: Rs. 3500</p>
+        <button>Buy Now</button>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/200" alt="Shoe 2">
+        <h3>Casual Shoes</h3>
+        <p>Price: Rs. 2800</p>
+        <button>Buy Now</button>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/200" alt="Shoe 3">
+        <h3>Formal Shoes</h3>
+        <p>Price: Rs. 4200</p>
+        <button>Buy Now</button>
+      </div>
     </div>
+  </section>
 
 </body>
 </html>
