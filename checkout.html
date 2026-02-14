@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkout</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h2>Aqib Shoes</h2>
+</header>
+
+<section class="section">
+<div class="checkout-box">
+<h2>Checkout</h2>
+
+<input type="text" placeholder="Full Name" required>
+<input type="text" placeholder="Address" required>
+<input type="text" placeholder="Phone Number" required>
+
+<select>
+<option>Cash on Delivery</option>
+<option>JazzCash</option>
+<option>Easypaisa</option>
+</select>
+
+<input type="text" placeholder="Payment Reference (if JazzCash/Easypaisa)">
+
+<button class="buy-btn" onclick="orderSuccess()">Place Order</button>
+
+</div>
+</section>
+
+<script src="script.js"></script>
+<script>
+function orderSuccess(){
+alert("Order Placed Successfully!");
+localStorage.removeItem("cart");
+window.location.href="index.html";
+}
+</script>
+
+</body>
+</html>
